@@ -4,6 +4,8 @@ const moneyBtn = document.querySelector("#money-btn");
 const hireTaxBtn = document.querySelector("#hireTax-btn")
 const hireTax10Btn = document.querySelector("#hireTax10-btn")
 const collecterHeading = document.querySelector("#collecter-heading");
+const saveBtn = document.querySelector("#save-btn")
+const loadBtn = document.querySelector("#load-btn")
 // game vars
 let money = 0;
 let taxCollecters = 0;
@@ -39,6 +41,14 @@ hireTax10Btn.addEventListener("click", () => {
         Hire1cost *= 1.2;
         Hire1cost = Math.round(Hire1cost);
     }
+});
+saveBtn.addEventListener("click", () => {
+    localStorage.setItem('money', money);
+    localStorage.setItem('taxMen', taxCollecters);
+});
+loadBtn.addEventListener("click", () => {
+    money = localStorage.getItem('money');
+    taxCollecters = localStorage.getItem('taxMen');
 });
 
 
