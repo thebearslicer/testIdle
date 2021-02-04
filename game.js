@@ -47,8 +47,8 @@ saveBtn.addEventListener("click", () => {
     localStorage.setItem('taxMen', taxCollecters);
 });
 loadBtn.addEventListener("click", () => {
-    money = localStorage.getItem('money');
-    taxCollecters = localStorage.getItem('taxMen');
+    money = parseInt(localStorage.getItem('money'));
+    taxCollecters = parseInt(localStorage.getItem('taxMen'));
 });
 
 
