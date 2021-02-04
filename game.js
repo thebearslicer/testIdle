@@ -42,12 +42,14 @@ hireTax10Btn.addEventListener("click", () => {
         Hire1cost = Math.round(Hire1cost);
     }
 });
+//save and load
 saveBtn.addEventListener("click", () => {
     localStorage.setItem('money', money);
     localStorage.setItem('taxMen', taxCollecters);
+    alert("Saved.")
 });
 loadBtn.addEventListener("click", () => {
-    money = parseInt(localStorage.getItem('money'));
+    money = parseInt(localStorage.getItem('money')); //use parseInt() to fix bad bug
     taxCollecters = parseInt(localStorage.getItem('taxMen'));
 });
 
